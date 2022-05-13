@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Macondo&family=Poppins&display=swap');
 
 :root {
     --primary-color: #ff0099;
@@ -10,14 +11,14 @@
 }
 
 body {
-    font-family: sans-serif;
+    font-family: Poppins, sans-serif;
     background-color: #efefef;
 }
 
 header {
     padding: 20px 100px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     background-color: var(--primary-color);
     animation: slideFromLeft 1.5s ease-in-out;
@@ -28,6 +29,7 @@ header > div:first-child, header > div:nth-child(2) {
 }
 
 .main-header {
+    font-family: Macondo;
     color: #fff;
 }
 
@@ -68,14 +70,14 @@ header > div:first-child, header > div:nth-child(2) {
 
 .socials .fa {
     color: #fff;
-    font-size: 19px;
+    font-size: 25px;
 }
 
-.socials .fa:last-child {
-    margin-right: 0%;
+.socials .fa:not(last-child) {
+    margin-right: 20px;
 }
 
-.socials > i {
+.socials .fa-bars {
     display: none;
 }
 
@@ -84,14 +86,14 @@ header > div:first-child, header > div:nth-child(2) {
 }
 
 .showcase {
-    padding: 100px 300px;
+    padding: 100px;
 }
 
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: fadeIn 2.5s ease-in-out;
+    animation: fadeIn 4s ease-in-out;
 }
 
 .showcase-content {
@@ -108,10 +110,10 @@ button {
     color: #fff;
     padding: 10px 30px;
     font-size: 17px;
-    border-radius: 25px;
+    border-radius: 15px;
     outline: none;
     border: none;
-    box-shadow: 1px 2px 5px 3px rgba(255, 0, 153, 0.17)
+    box-shadow: 1px 2px 5px 4px rgba(255, 0, 153, 0.3)
 }
 
 .btn > button:first-child {
@@ -129,9 +131,6 @@ button:hover {
     transform: scale(.97);
 }
 
-.image-wrapper {
-    position: relative;
-}
 
 img {
     height: 430px;
@@ -141,13 +140,58 @@ img {
     display: none;
 }
 
-.image-wrapper span {
+/* Cakes */ 
+#birthdayCakes-wrapper {
+    padding: 0 100px;
+    margin-bottom: 50px;
+}
+
+#birthday-cakes {
+    display: flex;
+}
+
+.cakes-title h3 {
+    font-size: 35px;
+    font-family: Macondo;
+    margin-bottom: 30px;
+}
+
+.birthday-cake {
+    cursor: pointer;
+    height: 350px;
+    width: 400px;
+    box-shadow: 1px 3px 4px 4px rgba(0, 0, 0, 0.096);
+    position: relative;
+}
+
+.birthday-cake:not(:last-child) {
+    margin-right: 20px;
+}
+
+.birthday-cake img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.cakes-btn {
     position: absolute;
-    left: 25%;
-    bottom: 6px;
-    text-transform: uppercase;
-    color: blue;
-    font-weight: 700;
+    top: 0%;
+    height: 100%;
+    width: 100%;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0);
+    z-index: 10;
+    transition: all .7s ease-in-out;
+}
+
+.birthday-cake:hover .cakes-btn {
+    background-color: rgba(45, 57, 71, 0.5);
+    transform: scale(1);
+
 }
 
 @keyframes slideFromLeft {
