@@ -10,6 +10,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Poppins, sans-serif;
     background-color: #efefef;
@@ -146,7 +150,7 @@ button:hover {
 /* Cakes */ 
 #birthdayCakes-wrapper {
     padding: 0 100px;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
 }
 
 #birthday-cakes {
@@ -160,12 +164,18 @@ button:hover {
 }
 
 .birthday-cake {
+    position: relative;
     cursor: pointer;
     height: 350px;
     width: 500px;
     box-shadow: 1px 3px 4px 4px rgba(0, 0, 0, 0.096);
-    position: relative;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
 }
+
+.birthday-cake.show {
+    opacity: 1;
+}  
 
 .birthday-cake:not(:last-child) {
     margin-right: 20px;
