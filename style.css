@@ -17,7 +17,7 @@ body {
 }
 
 header {
-    padding: 20px 100px;
+    padding: 30px 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -92,7 +92,6 @@ header > div:first-child, header > div:nth-child(2) {
 
 .container {
     display: flex;
-    justify-content: center;
     align-items: center;
     animation: fadeIn 4s ease-in-out;
 }
@@ -107,8 +106,7 @@ header > div:first-child, header > div:nth-child(2) {
     font-size: 45px;
 }
 
-button,
-.cakes-btn {
+button {
     background-color: var(--primary-color);
     color: #fff;
     padding: 10px 30px;
@@ -135,8 +133,10 @@ button:hover {
 }
 
 
-img {
-    height: 430px;
+.image-wrapper img {
+    /* height: 430px; */
+    height: 350px;
+    width: 500px;
 }
 
 .btn-1 {
@@ -182,13 +182,17 @@ img {
     top: 0%;
     height: 100%;
     width: 100%;
+    padding: 10px 30px;
+    font-size: 17px;
+    outline: none;
+    border: none;
     color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
     transform: scale(0);
     z-index: 10;
-    transition: all .7s ease-in-out;
+    transition: all .7s ease-in-out; 
 }
 
 .birthday-cake:hover .cakes-btn {
@@ -217,7 +221,7 @@ img {
     }
 }
 
-@media (max-width: 768px) {
+@media (min-width: 501px) and (max-width: 768px) {
     header {
         padding: 20px 30px;
         flex-direction: column;
@@ -232,7 +236,7 @@ img {
     }
 
     .main-header h1 {
-        font-size: 20px;
+        font-size: 40px;
     }
 
     .navbar {
@@ -247,12 +251,24 @@ img {
         flex-direction: column;
     }
 
+    .showcase {
+        padding: 50px 100px;
+    }
+
+    .showcase-content {
+        margin-bottom: 80px;
+    }
+
+    #birthdayCakes-wrapper {
+        padding: 0 80px;
+    }
+
     #birthday-cakes {
         display: flex;
         flex-direction: column;
     }
+    
 }
-
 @media (max-width: 500px) {
     header {
         padding: 25px 10px;
@@ -288,8 +304,9 @@ img {
         padding: 0 10px;
     }
 
-    img {
-        height: 420px;
+    .image-wrapper img {
+        /* height: 350px; */
+        width: 400px;
     }
 
     .container {
