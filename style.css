@@ -218,9 +218,50 @@ button:hover {
     box-shadow: none;
 }
 
+footer {
+    padding: 30px 100px;
+    background-color: var(--primary-color);
+}
 
+.footer-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
 
+.footer-wrapper ul,
+.footer-wrapper h3,
+.footer-wrapper .contacts {
+    text-align: center;
+}
 
+footer li {
+    list-style: none;
+    margin-bottom: 15px;
+}
+
+footer h3,
+footer p {
+    margin-bottom: 15px;
+}
+
+footer p:hover {
+    cursor: pointer;
+}
+
+footer a {
+    text-decoration: none;
+    color: #222;
+    transition: color .4s ease-in;
+}
+
+footer li:hover a {
+    cursor: pointer;
+    color: #fff;
+}
+
+footer i {
+    margin-right: 10px;
+}
 
 @keyframes slideFromLeft {
     from {
@@ -288,8 +329,17 @@ button:hover {
         display: flex;
         flex-direction: column;
     }
+
+    footer {
+        padding: 30px 50px;
+    }
+
+    .footer-wrapper {
+        flex-direction: column;
+    }
     
 }
+
 @media (max-width: 500px) {
     header {
         padding: 25px 10px;
@@ -366,5 +416,15 @@ button:hover {
     .birthday-cake:not(:last-child) {
         margin-right: 0px;
     }
+
+    footer {
+        padding: 30px;
+    }
+
+    .footer-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+    
 
 }
