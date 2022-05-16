@@ -153,12 +153,14 @@ button:hover {
 }
 
 /* Cakes */ 
-#birthdayCakes-wrapper {
+#birthdayCakes-wrapper,
+#weddingCakes-wrapper {
     padding: 0 100px;
     margin-bottom: 100px;
 }
 
-#birthday-cakes {
+#birthday-cakes,
+#wedding-cakes {
     display: flex;
 }
 
@@ -168,7 +170,7 @@ button:hover {
     margin-bottom: 30px;
 }
 
-.birthday-cake {
+.cake {
     position: relative;
     cursor: pointer;
     height: 350px;
@@ -178,15 +180,15 @@ button:hover {
     transition: opacity 2s ease-in-out;
 }
 
-.birthday-cake.show {
+.cake.show {
     opacity: 1;
 }  
 
-.birthday-cake:not(:last-child) {
+.cake:not(:last-child) {
     margin-right: 20px;
 }
 
-.birthday-cake img {
+.cake img {
     object-fit: cover;
     height: 100%;
     width: 100%;
@@ -210,11 +212,15 @@ button:hover {
     transition: all .7s ease-in-out; 
 }
 
-.birthday-cake:hover .cakes-btn {
+.cake:hover .cakes-btn {
     background-color: rgba(45, 57, 71, 0.5);
     transform: scale(1);
     box-shadow: none;
 }
+
+
+
+
 
 @keyframes slideFromLeft {
     from {
